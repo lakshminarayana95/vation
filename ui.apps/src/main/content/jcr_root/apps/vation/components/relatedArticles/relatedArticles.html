@@ -1,0 +1,12 @@
+<h2>Related article Component</h2>
+
+<div data-sly-use.relatedObj="com.vation.core.models.RelatedArticle">
+        <div>Heading Title - ${relatedObj.headingTitle}</div>
+        <div>Heading Navigation - ${relatedObj.headingNavigation}</div><br>
+
+    <sly data-sly-list.item="${relatedObj.relatedArticleDetails}">
+        <img src="${item.relatedArticleImage}" alt="${item.imageTitle}" />
+        <div>Image Title - ${item.imageTitle}</div>
+        <div>Image Title Navigation - ${item.imageTitleNavigation}</div>
+    </sly>
+</div>
