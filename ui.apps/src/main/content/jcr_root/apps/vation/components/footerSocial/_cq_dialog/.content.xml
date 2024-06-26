@@ -11,6 +11,11 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Enter Text"
+                        name="./text"/>
                     <multi
                         granite:class="addNew"
                         jcr:primaryType="nt:unstructured"
@@ -23,8 +28,12 @@
                         validation="multi-validate">
                         <field
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
+                            jcr:title="Click to Expand"
+                            sling:resourceType="granite/ui/components/foundation/container"
                             name="./multiitems">
+                            <layout
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/layouts/collapsible"/>
                             <items jcr:primaryType="nt:unstructured">
                                 <column
                                     jcr:primaryType="nt:unstructured"
@@ -34,7 +43,7 @@
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                             fieldLabel="Enter Title"
-                                            name="./title"/>
+                                            name="./icon"/>
                                         <url
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"

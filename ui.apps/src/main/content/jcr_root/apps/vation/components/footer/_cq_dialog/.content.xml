@@ -12,6 +12,7 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
+<<<<<<< HEAD
                     <rightNav
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Right Navigation "
@@ -78,6 +79,8 @@
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                         fieldLabel="Enter MAIL ID"
                         name="./privacymail"/>
+=======
+>>>>>>> 6db0cdaf4ded66d7a10341ca72f58a8cb914e6db
                     <navFields
                         granite:class="addNew"
                         jcr:primaryType="nt:unstructured"
@@ -93,8 +96,12 @@
                             fieldlimit="5"/>
                         <field
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
+                            jcr:title="Click to Expand"
+                            sling:resourceType="granite/ui/components/foundation/container"
                             name="./multiFieldItems">
+                            <layout
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/layouts/collapsible"/>
                             <items jcr:primaryType="nt:unstructured">
                                 <column
                                     jcr:primaryType="nt:unstructured"
@@ -116,17 +123,6 @@
                             </items>
                         </field>
                     </navFields>
-                    <copyrightText
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Copyright Text"
-                        name="./copyrightText"/>
-                    <bg-img
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                        fieldLabel="Enter bg image"
-                        name="./bgimage"
-                        rootPath="/content"/>
                 </items>
             </columns>
         </items>

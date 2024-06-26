@@ -1,10 +1,12 @@
-
+ <div class="socials">
+${properties.text}
 <sly data-sly-list.multifield="${resource.getChildren}" >
    <sly data-sly-test="${multifield.name =='multiitems'}">
       <sly data-sly-list.navlist="${multifield.getChildren}">
-         <a href="${navlist.url}" title="${navlist.title}" target="_blank">
+         <a href="${navlist.url}" title="${navlist.title}" >
             ${navlist.svgIcon @context='unsafe'}
          </a>
       </sly>
    </sly>
 </sly>
+</div>
