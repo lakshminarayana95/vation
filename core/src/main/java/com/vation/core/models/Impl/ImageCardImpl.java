@@ -1,9 +1,13 @@
-package com.vation.core.models;
+package com.vation.core.models.Impl;
 
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ChildResource;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
+
+import com.vation.core.models.ImageCard;
+import com.vation.core.models.ImageCard.CardItem;
+
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import java.util.List;
 

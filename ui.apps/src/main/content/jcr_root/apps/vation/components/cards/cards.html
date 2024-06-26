@@ -1,0 +1,15 @@
+<div data-sly-use.cardsObj="com.vation.core.models.CardsModel">
+    <h1>${cardsObj.title @ context='html'}</h1>
+    <h3>${cardsObj.description @ context='html'}</h3>
+    <h5>${cardsObj.subdescription @ context='html'}</h5>
+
+    <sly data-sly-list.buttons="${cardsObj.label}">
+        <div>${buttons.linktitle}: <a href="${buttons.link}">${buttons.link}</a></div>
+    </sly>
+
+    <sly data-sly-list.cardItems="${cardsObj.cardsDetails}">
+        <div>
+            <img src="${cardItems.fileReferenceImage @ context='html'}" alt="${cardItems.imagealttext @ context='html'}">
+        </div>
+    </sly>
+</div>

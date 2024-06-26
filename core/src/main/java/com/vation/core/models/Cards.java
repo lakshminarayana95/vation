@@ -2,16 +2,19 @@ package com.vation.core.models;
 
 import java.util.List;
 
-public interface ImageCard {
-    String getMtitle();
-    String getMdescription();
+public interface Cards {
+    String getTitle();
+    String getDescription();
+    String getSubdescription();
+    List<Button> getButtons();
     List<CardItem> getCards();
 
-    interface CardItem {
-        String getTitle();
-        String getDescription();
+    interface Button {
         String getLink();
         String getLinktitle();
+    }
+
+    interface CardItem {
         String getFileReferenceImage();
         String getImagealttext();
     }
