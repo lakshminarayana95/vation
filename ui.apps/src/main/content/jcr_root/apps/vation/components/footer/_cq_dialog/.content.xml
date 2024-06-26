@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="nt:unstructured"
     jcr:title="Footer"
     sling:resourceType="cq/gui/components/authoring/dialog"
@@ -12,77 +12,11 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
-                    <rightNav
-                        jcr:primaryType="nt:unstructured"
-                        jcr:title="Right Navigation "
-                        sling:resourceType="granite/ui/components/coral/foundation/container">
-                        <items jcr:primaryType="nt:unstructured">
-                            <multi
-                                granite:class="full-width"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                                aem-nested=""
-                                composite="{Boolean}true"
-                                fieldDescription="Click the '+' to add a new Link."
-                                fieldLabel="List of Links"
-                                fieldName="List of Links"
-                                name="./rightnavigation"
-                                prefix="./">
-                                <field
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
-                                    name="./rightnavigation">
-                                    <items jcr:primaryType="nt:unstructured">
-                                        <column
-                                            jcr:primaryType="nt:unstructured"
-                                            sling:resourceType="granite/ui/components/coral/foundation/container">
-                                            <items jcr:primaryType="nt:unstructured">
-                                                <title
-                                                    jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                    fieldLabel="Enter Title"
-                                                    name="./title"/>
-                                                <hyperlink
-                                                    jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
-                                                    fieldLabel="Enter path"
-                                                    name="./link"/>
-                                                <isOpenInNewTab
-                                                    jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
-                                                    name="./isOpenInNewTab"
-                                                    text="Open in New Window"
-                                                    value="{Boolean}true"/>
-                                                <isabutton
-                                                    jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
-                                                    fieldDescription="Enable this checkbox if it is a button "
-                                                    name="./isabutton"
-                                                    text="Select checkbox if it is a button"
-                                                    type="checkbox"
-                                                    value="true"/>
-                                            </items>
-                                        </column>
-                                    </items>
-                                </field>
-                            </multi>
-                        </items>
-                    </rightNav>
-                    <privacytext
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Enter privacy text"
-                        name="./privacytext"/>
-                    <privacymail
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Enter MAIL ID"
-                        name="./privacymail"/>
                     <navFields
                         granite:class="addNew"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                        aem-nested=""
+                        aem-nested="\0"
                         class="full-width"
                         composite="{Boolean}true"
                         fieldDescription="Click '+' to add a new field"
@@ -93,8 +27,12 @@
                             fieldlimit="5"/>
                         <field
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
+                            jcr:title="Click to Expand"
+                            sling:resourceType="granite/ui/components/foundation/container"
                             name="./multiFieldItems">
+                            <layout
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/layouts/collapsible"/>
                             <items jcr:primaryType="nt:unstructured">
                                 <column
                                     jcr:primaryType="nt:unstructured"
@@ -116,17 +54,6 @@
                             </items>
                         </field>
                     </navFields>
-                    <copyrightText
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Copyright Text"
-                        name="./copyrightText"/>
-                    <bg-img
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                        fieldLabel="Enter bg image"
-                        name="./bgimage"
-                        rootPath="/content"/>
                 </items>
             </columns>
         </items>
